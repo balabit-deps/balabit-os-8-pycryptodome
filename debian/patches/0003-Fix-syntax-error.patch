@@ -1,0 +1,22 @@
+From 6049b8158ddc81c94759cb2440c07571c6b3ca48 Mon Sep 17 00:00:00 2001
+From: Christopher Hoskin <mans0954@debian.org>
+Date: Fri, 2 Mar 2018 21:37:59 +0000
+Subject: Fix syntax error
+
+---
+ lib/Crypto/Util/_raw_api.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: pycryptodome-salsa/lib/Crypto/Util/_raw_api.py
+===================================================================
+--- pycryptodome-salsa.orig/lib/Crypto/Util/_raw_api.py	2018-06-12 11:40:36.393583344 +0200
++++ pycryptodome-salsa/lib/Crypto/Util/_raw_api.py	2018-06-12 11:40:36.389583285 +0200
+@@ -253,7 +253,7 @@
+             filename = basename + ext
+             return load_lib(pycryptodome_filename(dir_comps, filename),
+                             cdecl)
+-        except OSError, exp:
++        except OSError as exp:
+             attempts.append("Trying '%s': %s" % (filename, str(exp)))
+     raise OSError("Cannot load native module '%s': %s" % (name, ", ".join(attempts)))
+ 

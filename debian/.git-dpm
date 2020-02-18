@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+6049b8158ddc81c94759cb2440c07571c6b3ca48
+6049b8158ddc81c94759cb2440c07571c6b3ca48
+a13ebaef30150f6302ff3ab988c8b3f1b6274680
+a13ebaef30150f6302ff3ab988c8b3f1b6274680
+pycryptodome_3.4.11.orig.tar.gz
+daffceda74d65d57c83a63d1e5d3125b6961d571
+6703564
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"

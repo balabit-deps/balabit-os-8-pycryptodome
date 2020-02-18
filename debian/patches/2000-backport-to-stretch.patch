@@ -1,0 +1,50 @@
+Description: Backport to Stretch
+ Document changes needed to build package in Debian Stable.
+  * The dh_installdocs feature --doc-main-package was added to
+    debhelper 10.8.
+  * The navigation_depth html_theme_options is not available in sphinx
+    1.4.9.
+Author: Petter Reinholdtsen <pere@debian.org>
+Forwarded: no
+Reviewed-By: Petter Reinholdtsen <pere@debian.org>
+Last-Update: 2018-06-11
+
+--- pycryptodome-3.4.11.orig/Doc/conf.py
++++ pycryptodome-3.4.11/Doc/conf.py
+@@ -112,7 +112,7 @@ html_theme = 'sphinx_rtd_theme'
+ # further.  For a list of options available for each theme, see the
+ # documentation.
+ html_theme_options = {
+-    'navigation_depth' : 5,
++#    'navigation_depth' : 5,
+ }
+ 
+ # Add any paths that contain custom themes here, relative to this directory.
+--- pycryptodome-3.4.11.orig/debian/rules
++++ pycryptodome-3.4.11/debian/rules
+@@ -25,4 +25,4 @@ override_dh_auto_build:
+ override_dh_installdocs:
+ 	dh_installdocs -p python-pycryptodome
+ 	dh_installdocs -p python3-pycryptodome
+-	dh_installdocs --doc-main-package=python-pycryptodome-doc -p python-pycryptodome-doc
++	dh_installdocs -p python-pycryptodome-doc
+diff --git a/debian/compat b/debian/compat
+index b4de394..f599e28 100644
+--- a/debian/compat
++++ b/debian/compat
+@@ -1 +1 @@
+-11
++10
+diff --git a/debian/control b/debian/control
+index 15e8ecc..a495a19 100644
+--- a/debian/control
++++ b/debian/control
+@@ -3,7 +3,7 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
+ Uploaders: Christopher Hoskin <mans0954@debian.org>
+ Section: python
+ Priority: optional
+-Build-Depends: debhelper (>= 11),
++Build-Depends: debhelper (>= 10),
+                dh-python,
+                python-all-dev,
+                python-setuptools,

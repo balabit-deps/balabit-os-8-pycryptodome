@@ -1,0 +1,83 @@
+pycryptodome (3.6.1-2build4) focal; urgency=medium
+
+  * No-change rebuild to drop python3.7.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 18 Feb 2020 10:21:40 +0100
+
+pycryptodome (3.6.1-2build3) focal; urgency=medium
+
+  * No-change rebuild to build with python3.8.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 18 Oct 2019 18:09:26 +0000
+
+pycryptodome (3.6.1-2build2) disco; urgency=medium
+
+  * No-change rebuild to build without python3.6 support.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 03 Nov 2018 12:08:12 +0000
+
+pycryptodome (3.6.1-2build1) cosmic; urgency=medium
+
+  * No-change rebuild to build for python3.7.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 28 Jun 2018 06:54:13 +0000
+
+pycryptodome (3.6.1-2) unstable; urgency=medium
+
+  * Bump Standards-Version from 4.1.3 to 4.1.4.
+  * Refresh 0003-Fix-syntax-error.patch.
+  * Updated 2000-backport-to-stretch.patch with more changes needed in Stretch.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 12 Jun 2018 12:04:57 +0200
+
+pycryptodome (3.6.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+
+  [ Petter Reinholdtsen ]
+  * New upstream release 3.6.1.
+    - Solve build problem on 32 bits big endian archs (Closes: #892175).
+  * Ran wrap-and-sort.
+  * Add d/gbp.conf to enforce the use of pristine-tar.
+  * Added 2000-backport-to-stretch.patch documenting a way to backport
+    to Debian Stretch.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 12 Jun 2018 08:22:26 +0000
+
+pycryptodome (3.4.11-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Christopher Hoskin ]
+  * Fix "CVE-2018-6594" Resolved by upstream in 3.4.10 (Closes:
+    #889998)
+  * Add upstream metadata file
+  * Add 0003-Fix-syntax-error.patch
+  * Add lib/Cryptodome/ to clean
+  * Bump debhelper compat from 9 to 11
+  * Keep the documentation in python-pycryptodome-doc (for now at least)
+  * Bump Standards-Version from 4.1.1 to 4.1.3 (no change required)
+
+ -- Christopher Hoskin <mans0954@debian.org>  Tue, 06 Mar 2018 07:02:32 +0000
+
+pycryptodome (3.4.7-1) unstable; urgency=medium
+
+  * New upstream release (3.4.7)
+  * Use secure URI in debian/watch
+  * Remove new-package-should-not-package-python2-module lintian override
+  * Update extra-license-file lintian override (Sphinx now appears to create a
+    copy of the source file with extension rst.txt)
+  * Bump Standards-Version from 3.9.8 to 4.1.1 (no change required)
+  * Add missing build dependency on python3-sphinx-rtd-theme
+
+ -- Christopher Hoskin <mans0954@debian.org>  Sat, 04 Nov 2017 10:24:18 +0000
+
+pycryptodome (3.4.6-1) unstable; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+  * Initial release. (Closes: #864294: ITP: pycryptodome --
+    cryptographic library for Python)
+
+ -- Christopher Hoskin <mans0954@debian.org>  Sun, 11 Jun 2017 20:51:56 +0100
